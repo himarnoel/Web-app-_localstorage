@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+body {
+    font-family: 'poppins', sans-serif;
+    font-size: 1rem;
+    overflow-y: hidden;
+    font-weight: 1.4;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    place-content: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.text {
+    font-size: 1.2rem;
+}
+
+.holder {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.land {
+    height: 103vh;
+    width: 50vw;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    height: 13vh;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+.signup {
+    height: 100vh;
+    width: 50vw;
+    display: grid;
+    place-items: center;
+}
+
+.inner {
+    height: 90vh;
+    width: 26vw;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #FF432A;
+    font-weight: 600;
+}
+
+input {
+    height: 5vh;
+    width: 26vw;
+    font-size: 1.2rem;
+    border-bottom: 2.2px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: black;
+}
+
+input:focus {
+    outline: #FF432A;
+    border-color: #FF432A;
+}
+
+button {
+    height: 6vh;
+    width: 26vw;
+    background: #FF432A;
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 0;
+    font-size: 1.5rem;
+    color: white;
+}

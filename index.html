@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <section class="body">
+        <div class="holder">
+            <img src="images/land.png" alt="" class="land">
+            <img src="images/Group 234.png" alt="" class="logo">
+        </div>
+        <div class="signup">
+            <div class="inner">
+                <h1>Sign in</h1>
+                <p class="text">If you don’t have an account register <br>You can <a href="signup.html" _blank>Register here!</a></p>
+                <input type="email" class="input" placeholder="Email" id="em" required placeholder="Email">
+                <input type="password" class="input" placeholder="Password" id="pas" required placeholder="Password">
+                <button onclick="login()">Submit</button>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    let student = [];
+
+    function getPreviousValues() {
+        if (localStorage.data) {
+            student = JSON.parse(localStorage.data);
+        }
+    }
+
+    function store() {
+
+        let fn = fname.value;
+        let ln = lname.value;
+        let em = email.value;
+        let pas = pass.value;
+
+        let obj = {
+            firstname: fname.value,
+            Lastname: lname.value,
+            email: email.value,
+            Password: pass.value
+        }
+
+        student.push(obj);
+        localStorage.data = JSON.stringify(student)
+
+    }
+
+    function login() {
+        let val = JSON.parse(localStorage.getItem("data"));
+        for (const k of val) {
+            if (k["email"] == em.value && k['Password'] == pas.value) {
+                location.href = "home.html"
+                console.log(k);
+            }
+        }
+        em.value = "";
+        pas.value = "";
+    }
+</script>
+
+</html>

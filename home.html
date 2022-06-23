@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="st.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav>
+        <img src="images/Group 234.png" alt="">
+        <h1>Student Portal</h1>
+        <button onclick="javascript:history.go(-1);">
+            Logout
+        </button>
+    </nav>
+    <div class="all">
+
+
+        <table id="table">
+            <tr>
+                <th>S/N</th>
+                <th>FirstName</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Wrong</th>
+            </tr>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    var val = JSON.parse(localStorage.getItem("data"));
+    table.innerHTML = "<tr><th>S/N</th><th>FirstName</th><th>Lastname</th><th>Email</th><th>Password</th></tr>"
+    for (let index = 0; index < val.length; index++) {
+        if (val[index].email.length != 0) {
+            table.innerHTML += `<tr><td>${index+1}</td> <td>${val[index].firstname}</td> <td>${val[index].Lastname}</td><td>${val[index].email}</td> <td>${val[index].Password}</td></tr>`
+        }
+
+    }
+</script>
+
+</html>
